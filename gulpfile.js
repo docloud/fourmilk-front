@@ -70,5 +70,5 @@ gulp.task('serve', function() {
         }
     });
 
-    gulp.watch('./src', ['app', 'site', 'html']);
+    gulp.watch(['./src/*', './src/html/*'], ['app', 'site', 'html']);
 });
