@@ -31,6 +31,26 @@ $(document).ready(function(){
         });
     });
 
-    $("#nav").html(compile_template("#nav-template", {}));
-    $("#dashboard").html(compile_template("#in-form", {}));
+    $("body").on("click", ".login-form", function(){
+        var form = $(this).parents("form");
+        var action = form.attr("action");
+        var method = form.attr("method");
+
+        console.log(form);
+        console.log(action);
+        console.log(method);
+        $.ajax({
+            url: action,
+            type: method,
+            async: false,
+            data: form.serialize()
+        }).done(function(data) {
+            $("#nav").html(compile_template("#nav-template", {username: data.username}));
+            alert("Success");
+        }).fail(function(data){
+            alert(JSON.parse(data.responseText).message);
+        });
+    });
+
+    $("#dashboard").html(compile_template("#login-form", {}));
 });

@@ -1,0 +1,19 @@
+<script id="out-form" type="text/x-handlebars-template">
+    <div class="col-md-8 col-md-offset-2">
+        <form action="http://127.0.0.1:3000/part/out" method="put" onsubmit="return false;">
+            <div class="form-group">
+                <label for="id">零件编号</label>
+                <input type="text" class="form-control" id="id" name="id" value="{{id}}">
+            </div>
+            <div class="form-group">
+                <label for="value">零件名称</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="value">出库量</label>
+                <input type="number" class="form-control" id="value" name="value">
+            </div>
+            <button type="submit" class="submit-form btn btn-primary">Submit</button>
+        </form>
+    </div>
+</script>
