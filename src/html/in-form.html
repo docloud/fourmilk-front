@@ -1,7 +1,19 @@
 <script id="in-form" type="text/x-handlebars-template">
-    <form action="http://127.0.0.1:3000/part/in" method="put" onsubmit="return false;">
-        <input name="id" value="564722cedffa711fb03a46dd">
-        <input name="value" value="10">
-        <button type="submit" class="submit-form">Submit</button>
-    </form>
+    <div class="col-md-8 col-md-offset-2">
+        <form action="http://127.0.0.1:3000/part/in" method="put" onsubmit="return false;">
+            <div class="form-group">
+                <label for="id">零件编号</label>
+                <input type="text" class="form-control" id="id" name="id" value="{{id}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="value">零件名称</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{name}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="value">入库量</label>
+                <input type="number" class="form-control" id="value" name="value">
+            </div>
+            <button class="submit-form btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
 </script>
