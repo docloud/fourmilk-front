@@ -13,7 +13,7 @@ var page_files = [
 
 var site_dir = 'site';
 
-gulp.task('default', ['library', 'app', 'site', 'html']);
+gulp.task('default', ['library', 'app', 'site', 'html', 'jquery']);
 
 /*
 站点第三方依赖库
@@ -21,6 +21,11 @@ gulp.task('default', ['library', 'app', 'site', 'html']);
 gulp.task('library', function() {
     gulp.src('./node_modules/bootstrap/dist/**')
         .pipe(gulp.dest(site_dir + '/lib/bootstrap'));
+});
+
+gulp.task('jquery', function() {
+    gulp.src('./node_modules/jquery/dist/**')
+        .pipe(gulp.dest(site_dir + '/lib/jquery'));
 });
 
 /*
