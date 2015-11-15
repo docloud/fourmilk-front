@@ -1,0 +1,28 @@
+<script id="table" type="text/x-handlebars-template">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <th>零件名称</th>
+                <th>零件库存量</th>
+                <th>零件库存临界值</th>
+                <th>订货数量</th>
+                <th>操作</th>
+            </thead>
+            <tbody>
+            {{#each data}}
+                <tr data-id="{{this._id}}" data-name="{{this.name}}">
+                    <td>{{this.name}}</td>
+                    <td>{{this.amount}}</td>
+                    <td>{{this.limit}}</td>
+                    <td>{{this.order}}</td>
+                    <td>
+                        <button class="btn btn-default" data-pages="#in-form">入库</button>
+                        <button class="btn btn-primary" data-pages="#order-form">订购</button>
+                        <button class="btn btn-success" data-pages="#out-form">出库</button>
+                    </td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+</script>
