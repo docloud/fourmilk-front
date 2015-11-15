@@ -31,6 +31,6 @@ $(document).ready(function(){
         });
     });
 
-    var html = compile_template("#in-form", {});
-    $("#dashboard").html(html);
+    $("#nav").html(compile_template("#nav-template", {}));
+    $("#dashboard").html(compile_template("#in-form", {}));
 });
