@@ -8,7 +8,7 @@ var Bootstrap = require("bootstrap");
 
 $(document).ready(function(){
     var user = null;
-    var url_prefix = "http://localhost:3000/";
+    var url_prefix = "http://115.28.204.118:3000/";
     var compile_template = function(selector, context) {
         var source = $(selector).html();
         var template = Handlebars.compile(source);

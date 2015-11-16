@@ -54,6 +54,11 @@ gulp.task('html', function() {
         .pipe(gulp.dest(site_dir));
 });
 
+gulp.task('apidoc', function() {
+    gulp.src('./docs/api/doc/**')
+        .pipe(gulp.dest(site_dir + '/docs/api'));
+})
+
 /*
 启动本地调试服务器
  */
