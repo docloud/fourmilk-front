@@ -4,3 +4,6 @@
 
 help:
 	@echo ""
+
+publish:
+	@ghp-import site -p -n -b gh-pages
